@@ -1,8 +1,8 @@
 // Code goes here
 
-angular.module('myApp', ['ngMaterial', 'jkAngularCarousel'])
+angular.module('myApp', ['ngMaterial', 'jkAngularCarousel', 'FBAngular'])
 
-.controller('MyCtrl', function($scope) {
+.controller('MyCtrl', function($scope, Fullscreen) {
     $scope.dataArray = [
       {
         src: 'images/1.jpg'

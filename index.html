@@ -8,33 +8,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="angular-fullscreen.js"></script>
     <link rel="stylesheet" href="jk-carousel.min.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="jk-carousel.min.js"></script>
     <script src="script.js"></script>
   </head>
 
-  <body ng-controller="MyCtrl" >
+  <body ng-controller="MyCtrl" fullscreen>
     <md-card layout="column" layout-align="center center" style="padding-bottom: 10px" >
       <h3>Basic Carousel setup</h3>
       <jk-carousel
         data="dataArray"
         item-template-url="'item-template.html'"
         max-width="800" 
+        mini-display="hide"
         max-height="500" >
         </jk-carousel>
     </md-card>
-    <md-card layout="column" layout-align="center center" style="padding-bottom: 10px" >
-      <h3>AutoSlide Carousel</h3>
-      <jk-carousel
-        data="dataArray"
-        item-template-url="'item-template.html'"
-        max-width="800" 
-        max-height="500"
-        auto-slide="true"
-        auto-slide-time="2000" >
-        </jk-carousel>
-    </md-card>
+   
+   <md-icon ng-click="ctrl.navigateRight()" ng-click="goFullScreen()">fullscreen</md-icon>
+   <md-icon ng-click="ctrl.navigateRight()" >fullscreen_exit</md-icon>
   </body>
 
 </html>
