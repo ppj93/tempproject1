@@ -16,6 +16,11 @@
     bottom: 0; }
   .jk-carousel .right-arrow-button {
     right: 0; }
+  .jk-carousel .full-screen-button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
   .jk-carousel .md-icon-button {
     width: 48px;
     height: 48px;

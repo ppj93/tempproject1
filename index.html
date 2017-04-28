@@ -22,13 +22,15 @@
         data="dataArray"
         item-template-url="'item-template.html'"
         max-width="800" 
+        full-screen   
         mini-display="hide"
         max-height="500" >
         </jk-carousel>
+
+        <!-- above directive supports mini-display="show" or mini-display="hide" 
+        full-screen attrs. If full-screen is specified, full screen button is shown at the bottom. Else its not shown. -->
     </md-card>
    
-   <md-icon ng-click="ctrl.navigateRight()" >fullscreen</md-icon>
-   <md-icon ng-click="ctrl.navigateRight()" >fullscreen_exit</md-icon>
   </body>
 
 </html>
