@@ -1,5 +1,5 @@
 <div class="jk-carousel">
-    <div class="slides-container" layout="row">
+    <div class="slides-container" layout="{{ctrl.layout}}">
         <div ng-repeat="slideItem in ctrl.cloneData" class="slide">
             <div ng-include="ctrl.itemTemplateUrl"></div>
         </div>
@@ -15,9 +15,9 @@
    <!--<md-radio-group  id="radio-navigation"  class="radio-buttons-container"    layout="row"    ng-model="ctrl.radioButtonIndex"    layout-align="center center"    ng-change="ctrl.onRadioButtonClick()" >
       <md-radio-button      ng-repeat="item in ctrl.cloneData"      ng-value="$index"      aria-label="$index" >    </md-radio-button>
    </md-radio-group> -->
-   
+
     <!--Top-->
-    <!--<div layout="row" id="small-carousel" class="mini-display-top">
+    <div ng-if="ctrl.miniDisplay==='top'" layout="row" id="small-carousel" class="mini-display-top">
         <md-button class="md-icon-button left-arrow-button">
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
@@ -27,10 +27,10 @@
         <md-button class="md-icon-button right-arrow-button">
             <md-icon ng-click="ctrl.navigateRight()">chevron_right</md-icon>
         </md-button>
-    </div>-->
+    </div>
 
     <!--Right-->
-    <div layout="column" id="small-carousel" class="mini-display-right">
+    <div ng-if="ctrl.miniDisplay==='right'" layout="column" id="small-carousel" class="mini-display-right">
         <md-button class="md-icon-button left-arrow-button">
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
@@ -42,7 +42,7 @@
         </md-button>
     </div>
     <!--Bottom-->
-    <!--<div layout="row" id="small-carousel" class="mini-display-bottom">
+    <div ng-if="ctrl.miniDisplay==='bottom'" layout="row" id="small-carousel" class="mini-display-bottom">
         <md-button class="md-icon-button left-arrow-button">
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
@@ -52,9 +52,9 @@
         <md-button class="md-icon-button right-arrow-button">
             <md-icon ng-click="ctrl.navigateRight()">chevron_right</md-icon>
         </md-button>
-    </div>-->
+    </div>
     <!--Left-->
-    <div layout="column" id="small-carousel" class="mini-display-left">
+    <div ng-if="ctrl.miniDisplay==='left'" layout="column" id="small-carousel" class="mini-display-left">
         <md-button class="md-icon-button left-arrow-button">
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
