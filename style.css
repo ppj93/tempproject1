@@ -9,20 +9,41 @@ md-card {
   margin-bottom: 20px;
 }
 
-
+button.md-icon-button.right-arrow-button.md-button.md-ink-ripple{
+    z-index:99;
+}
+button.md-icon-button.left-arrow-button.md-button.md-ink-ripple{
+    z-index:99;
+}
 /*mini-display-right*/
 div.mini-display-right{
 	top:0;
 	left:90%;
 	position:absolute !important;
 }
-button.md-icon-button.left-arrow-button.md-button.md-ink-ripple{
+.mini-display-right button.md-icon-button.left-arrow-button.md-button.md-ink-ripple{
     margin:0 !important;
+    transform: rotate(90deg);
+    left: 22%;
 }
-button.md-icon-button.right-arrow-button.md-button.md-ink-ripple{
+.mini-display-right button.md-icon-button.right-arrow-button.md-button.md-ink-ripple{
     margin:0 !important;
     bottom:0px;
     top:100%;
+    transform: rotate(90deg);
+    left: 22%;
+}
+.mini-display-left button.md-icon-button.left-arrow-button.md-button.md-ink-ripple{
+    margin:0 !important;
+	transform: rotate(90deg);
+    left: 22%;
+}
+mini-display-left button.md-icon-button.right-arrow-button.md-button.md-ink-ripple{
+
+    margin:0 !important;
+    bottom:0px;
+    top:100%;
+
 }
 div.mini-display-right ul{
 	padding: 5px !important;
@@ -46,13 +67,15 @@ div.mini-display-left li{
 	width: 100% !important;
     display:inline-block !important;
 }
-button.md-icon-button.left-arrow-button.md-button.md-ink-ripple{
+.mini-display-left button.md-icon-button.left-arrow-button.md-button.md-ink-ripple{
      margin:0 !important;
 }
-button.md-icon-button.right-arrow-button.md-button.md-ink-ripple{
+.mini-display-left button.md-icon-button.right-arrow-button.md-button.md-ink-ripple{
        margin:0 !important;
     bottom:0px;
     top:100%;
+    transform: rotate(90deg);
+    left: 22%;
 }
 /*mini-display-bottom*/
 div.mini-display-bottom{
