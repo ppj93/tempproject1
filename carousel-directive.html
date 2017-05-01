@@ -1,7 +1,7 @@
 <div class="jk-carousel">
     <div class="slides-container" layout="{{ctrl.layout}}">
-        <div ng-repeat="slideItem in ctrl.cloneData" class="slide">
-            <div ng-include="ctrl.itemTemplateUrl"></div>
+        <div ng-repeat="slideItem in ctrl.cloneData" id="image-container" class="slide">
+            <div style="margin: 0 auto;" ng-include="ctrl.itemTemplateUrl"></div>
         </div>
     </div>
    <md-button class="md-icon-button left-arrow-button" >

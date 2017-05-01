@@ -19,11 +19,20 @@ angular.module('myApp', ['ngMaterial', 'jkAngularCarousel'])
       {
         src: 'images/5.jpg'
       },
-	  {
-        src: 'images/1.jpg'
+      {
+        src: 'images/7.png'
       },
       {
-        src: 'images/2.jpg'
+        src: 'images/3.jpg'
+      },
+      {
+        src: 'images/4.jpg'
+      },
+      {
+        src: 'images/7.png'
+      },
+	  {
+        src: 'images/1.jpg'
       },
       {
         src: 'images/3.jpg'
@@ -34,20 +43,9 @@ angular.module('myApp', ['ngMaterial', 'jkAngularCarousel'])
       {
         src: 'images/5.jpg'
       },
-	  {
-        src: 'images/1.jpg'
-      },
+      ,
       {
-        src: 'images/2.jpg'
-      },
-      {
-        src: 'images/3.jpg'
-      },
-      {
-        src: 'images/4.jpg'
-      },
-      {
-        src: 'images/5.jpg'
+        src: 'images/7.png'
       }
     ];
 });
