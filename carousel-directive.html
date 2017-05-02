@@ -22,7 +22,7 @@
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
         <ul id="small-carousel-images">
-            <li id="imgScroll" ng-repeat="slideItem in ((ctrl.cloneData.length - ctrl.currentIndex + 1) >= 10 ? ctrl.cloneData.slice(ctrl.currentIndex + 1, ctrl.cloneData.length <= 10 ? ctrl.cloneData.length - 1 : ctrl.currentIndex + 11) : ctrl.cloneData.slice(ctrl.currentIndex + 1, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, 10 - ctrl.cloneData.length + ctrl.currentIndex)))"><img ng-click="ctrl.goToSlide(($index + ctrl.currentIndex) % ctrl.cloneData.length)" src="{{slideItem.src}}" /></li>
+            <li id="imgScroll" ng-repeat="slideItem in ((ctrl.cloneData.length - ctrl.currentIndex + 1) >= 5) ? (((ctrl.currentIndex - 3) < 0) ? (ctrl.cloneData.slice(ctrl.cloneData.length - 3 + ctrl.currentIndex, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6))) : ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.currentIndex + 6)) : (((ctrl.currentIndex - 3) >= 0) ? (ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6 - ctrl.cloneData.length))) : (ctrl.cloneData.slice(0, ctrl.cloneData.length)))"><img ng-click="ctrl.goToSlide(($index - 4 + ctrl.currentIndex) % ctrl.cloneData.length)" src="{{slideItem.src}}" /></li>
         </ul>
         <md-button class="md-icon-button right-arrow-button">
             <md-icon ng-click="ctrl.navigateRight()">chevron_right</md-icon>
@@ -35,7 +35,7 @@
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
         <ul id="small-carousel-images">
-            <li id="imgScroll" ng-repeat="slideItem in ((ctrl.cloneData.length - ctrl.currentIndex + 1) >= 10 ? ctrl.cloneData.slice(ctrl.currentIndex + 1, ctrl.cloneData.length <= 10 ? ctrl.cloneData.length - 1 : ctrl.currentIndex + 11) : ctrl.cloneData.slice(ctrl.currentIndex + 1, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, 10 - ctrl.cloneData.length + ctrl.currentIndex)))"><img ng-click="ctrl.goToSlide(($index + ctrl.currentIndex) % ctrl.cloneData.length)" src="{{slideItem.src}}" /></li>
+            <li id="imgScroll" ng-repeat="slideItem in ((ctrl.cloneData.length - ctrl.currentIndex + 1) >= 5) ? (((ctrl.currentIndex - 3) < 0) ? (ctrl.cloneData.slice(ctrl.cloneData.length - 3 + ctrl.currentIndex, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6))) : ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.currentIndex + 6)) : (((ctrl.currentIndex - 3) >= 0) ? (ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6 - ctrl.cloneData.length))) : (ctrl.cloneData.slice(0, ctrl.cloneData.length)))"><img ng-click="ctrl.goToSlide(($index - 4 + ctrl.currentIndex) % ctrl.cloneData.length)" src="{{slideItem.src}}" /></li>
         </ul>
         <md-button class="md-icon-button right-arrow-button">
             <md-icon ng-click="ctrl.navigateRight()">chevron_right</md-icon>
@@ -47,7 +47,7 @@
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
         <ul id="small-carousel-images">
-            <li id="imgScroll" ng-repeat="slideItem in ((ctrl.cloneData.length - ctrl.currentIndex + 1) >= 10 ? ctrl.cloneData.slice(ctrl.currentIndex + 1, ctrl.cloneData.length <= 10 ? ctrl.cloneData.length - 1 : ctrl.currentIndex + 11) : ctrl.cloneData.slice(ctrl.currentIndex + 1, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, 10 - ctrl.cloneData.length + ctrl.currentIndex)))"><img ng-click="ctrl.goToSlide(($index + ctrl.currentIndex) % ctrl.cloneData.length)" src="{{slideItem.src}}" /></li>
+            <li id="imgScroll" ng-repeat="slideItem in ((ctrl.cloneData.length - ctrl.currentIndex + 1) >= 5) ? (((ctrl.currentIndex - 3) < 0) ? (ctrl.cloneData.slice(ctrl.cloneData.length - 3 + ctrl.currentIndex, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6))) : ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.currentIndex + 6)) : (((ctrl.currentIndex - 3) >= 0) ? (ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6 - ctrl.cloneData.length))) : (ctrl.cloneData.slice(0, ctrl.cloneData.length)))"><img ng-click="ctrl.goToSlide(($index - 4 + ctrl.currentIndex) % ctrl.cloneData.length)" src="{{slideItem.src}}" /></li>
         </ul>
         <md-button class="md-icon-button right-arrow-button">
             <md-icon ng-click="ctrl.navigateRight()">chevron_right</md-icon>
@@ -59,7 +59,7 @@
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
         <ul id="small-carousel-images">
-            <li id="imgScroll" ng-repeat="slideItem in ((ctrl.cloneData.length - ctrl.currentIndex + 1) >= 10 ? ctrl.cloneData.slice(ctrl.currentIndex + 1, ctrl.cloneData.length <= 10 ? ctrl.cloneData.length - 1 : ctrl.currentIndex + 11) : ctrl.cloneData.slice(ctrl.currentIndex + 1, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, 10 - ctrl.cloneData.length + ctrl.currentIndex)))"><img ng-click="ctrl.goToSlide(($index + ctrl.currentIndex) % ctrl.cloneData.length)" src="{{slideItem.src}}" /></li>
+            <li id="imgScroll" ng-repeat="slideItem in ((ctrl.cloneData.length - ctrl.currentIndex + 1) >= 5) ? (((ctrl.currentIndex - 3) < 0) ? (ctrl.cloneData.slice(ctrl.cloneData.length - 3 + ctrl.currentIndex, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6))) : ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.currentIndex + 6)) : (((ctrl.currentIndex - 3) >= 0) ? (ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6 - ctrl.cloneData.length))) : (ctrl.cloneData.slice(0, ctrl.cloneData.length)))"><img ng-click="ctrl.goToSlide(($index - 4 + ctrl.currentIndex) % ctrl.cloneData.length)" src="{{slideItem.src}}" /></li>
         </ul>
         <md-button class="md-icon-button right-arrow-button">
             <md-icon ng-click="ctrl.navigateRight()">chevron_right</md-icon>
