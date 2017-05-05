@@ -113,3 +113,16 @@ div.mini-display-top li{
 	width: 10% !important;
 	padding:5px;
 }
+
+
+.slider-combo-container {
+	position:relative;
+}
+
+.content-on-img {
+	float: left;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: green;
+}

@@ -1,6 +1,6 @@
 // Code goes here
 
-angular.module('myApp', ['ngMaterial', 'jkAngularCarousel'])
+angular.module('myApp', ['ngMaterial', 'jkAngularCarousel', 'ngSanitize'])
 
 .controller('MyCtrl', function($scope) {
     $scope.dataArray = [
@@ -20,7 +20,7 @@ angular.module('myApp', ['ngMaterial', 'jkAngularCarousel'])
         src: 'images/5.jpg'
       },
       {
-        src: 'images/7.png'
+        src: 'images/4.jpg'
       },
       {
         src: 'images/3.jpg'
@@ -29,7 +29,7 @@ angular.module('myApp', ['ngMaterial', 'jkAngularCarousel'])
         src: 'images/4.jpg'
       },
       {
-        src: 'images/7.png'
+        src: 'images/4.jpg'
       },
 	  {
         src: 'images/1.jpg'
@@ -45,7 +45,7 @@ angular.module('myApp', ['ngMaterial', 'jkAngularCarousel'])
       },
       ,
       {
-        src: 'images/7.png'
+        src: 'images/4.jpg'
       }
     ];
 });

@@ -1,8 +1,24 @@
 <div class="jk-carousel">
     <div class="slides-container" layout="{{ctrl.layout}}">
-        <div ng-swipe-left="ctrl.navigateRight()" ng-swipe-right="ctrl.navigateLeft()" ng-swipe-up="ctrl.navigateBottom()" ng-swipe-down="ctrl.navigateTop()" ng-repeat="slideItem in ctrl.cloneData" id="image-container" class="slide">
+        <div ng-swipe-left="ctrl.navigateRight()" ng-swipe-right="ctrl.navigateLeft()" ng-swipe-up="ctrl.navigateBottom()" 
+        ng-swipe-down="ctrl.navigateTop()" ng-repeat="element in ctrl.userElements" id="image-container" class="slide">
+            <div style="margin: 0 auto;">
+                <div ng-bind-html="element.innerHTML">
+                </div>
+            </div>
+        </div>        
+        
+         <!--<div ng-swipe-left="ctrl.navigateRight()" ng-swipe-right="ctrl.navigateLeft()" ng-swipe-up="ctrl.navigateBottom()" 
+        ng-swipe-down="ctrl.navigateTop()" id="image-container" class="slide">
+            <div style="margin: 0 auto;">
+                <div>
+                    <img src="images/1.jpg" >
+                </div>
+            </div>
+        </div>--> <!--<div ng-swipe-left="ctrl.navigateRight()" ng-swipe-right="ctrl.navigateLeft()" ng-swipe-up="ctrl.navigateBottom()" 
+        ng-swipe-down="ctrl.navigateTop()" ng-repeat="slideItem in ctrl.cloneData" id="image-container" class="slide">
             <div style="margin: 0 auto;" ng-include="ctrl.itemTemplateUrl"></div>
-        </div>
+        </div>-->
     </div>
    <md-button class="md-icon-button left-arrow-button" >
       <img id="arrow-left-main" ng-if="ctrl.arrowLeftMain" ng-src="{{ctrl.arrowLeftMain}}" ng-click="ctrl.navigateLeft()"></img>

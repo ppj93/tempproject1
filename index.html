@@ -7,6 +7,8 @@
     <script src="lib/angular-swipe.js"></script>
     <script src="lib/angular-aria.min.js"></script>
     <script src="lib/angular-material.min.js"></script>
+    <script src="lib/angular-sanitize.min.js"></script>
+
     <link rel="stylesheet" href="lib/angular-material.min.css" />
     <link href="lib/icon.css" rel="stylesheet">
     <script src="angular-fullscreen.js"></script>
@@ -23,18 +25,55 @@
       <jk-carousel
         data="dataArray"
         item-template-url="'item-template.html'"
+        full-screen-background="red"
         max-width="800" 
         mini-display="bottom"
-        speed="1000"
+        speed="1000000"
         arrow-left-main="images/icon2-left.png"
         arrow-right-main="images/icon2-right.png"
-        max-height="500" >
+        max-height="500"
+        full-screen >
+        
         </jk-carousel>
 
         <!-- above directive supports mini-display="show" or mini-display="hide" 
         full-screen attrs. If full-screen is specified, full screen button is shown at the bottom. Else its not shown. -->
     </md-card>
    
+    <div style="display: none">
+      <div class="slider-combo-container">
+      <img src="images/1.jpg">
+      <!--<div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>-->
+      </div>
+
+
+      <div class="slider-combo-container">
+      <img src="images/1.jpg">
+      <!--<div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>-->
+      </div>
+
+      <div class="slider-combo-container">
+      <img src="images/1.jpg">
+      <!--<div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>-->
+      </div>
+
+      <div class="slider-combo-container">
+      <img src="images/1.jpg">
+      <!--<div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>-->
+      </div>
+
+      <div class="slider-combo-container">
+      <img src="images/1.jpg">
+      <!--<div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>-->
+      </div>
+
+      <div class="slider-combo-container">
+      <img src="images/1.jpg">
+      <!--<div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>-->
+      </div>
+
+    </div>
+
   </body>
 
 </html>
