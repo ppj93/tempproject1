@@ -122,7 +122,9 @@ div.mini-display-top li{
 .content-on-img {
 	float: left;
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 0px;
+    top: 0px;
     background-color: green;
+	width: 100%;
+	display: hidden;
 }

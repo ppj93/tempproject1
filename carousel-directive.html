@@ -3,22 +3,10 @@
         <div ng-swipe-left="ctrl.navigateRight()" ng-swipe-right="ctrl.navigateLeft()" ng-swipe-up="ctrl.navigateBottom()" 
         ng-swipe-down="ctrl.navigateTop()" ng-repeat="element in ctrl.userElements" id="image-container" class="slide">
             <div style="margin: 0 auto;">
-                <div ng-bind-html="element.innerHTML">
+                <div style="position:relative" ng-bind-html="element.innerHTML">
                 </div>
             </div>
         </div>        
-        
-         <!--<div ng-swipe-left="ctrl.navigateRight()" ng-swipe-right="ctrl.navigateLeft()" ng-swipe-up="ctrl.navigateBottom()" 
-        ng-swipe-down="ctrl.navigateTop()" id="image-container" class="slide">
-            <div style="margin: 0 auto;">
-                <div>
-                    <img src="images/1.jpg" >
-                </div>
-            </div>
-        </div>--> <!--<div ng-swipe-left="ctrl.navigateRight()" ng-swipe-right="ctrl.navigateLeft()" ng-swipe-up="ctrl.navigateBottom()" 
-        ng-swipe-down="ctrl.navigateTop()" ng-repeat="slideItem in ctrl.cloneData" id="image-container" class="slide">
-            <div style="margin: 0 auto;" ng-include="ctrl.itemTemplateUrl"></div>
-        </div>-->
     </div>
    <md-button class="md-icon-button left-arrow-button" >
       <img id="arrow-left-main" ng-if="ctrl.arrowLeftMain" ng-src="{{ctrl.arrowLeftMain}}" ng-click="ctrl.navigateLeft()"></img>
@@ -32,52 +20,29 @@
       <md-radio-button      ng-repeat="item in ctrl.cloneData"      ng-value="$index"      aria-label="$index" >    </md-radio-button>
    </md-radio-group> -->
 
-    <!--Top-->
-    <div ng-if="ctrl.miniDisplay==='top'" layout="row" id="small-carousel" class="mini-display-top">
-        <md-button class="md-icon-button left-arrow-button">
-            <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
-        </md-button>
-        <ul id="small-carousel-images">
-            <li id="imgScroll" ng-repeat="slideItem in ((ctrl.cloneData.length - ctrl.currentIndex + 1) >= 5) ? (((ctrl.currentIndex - 3) < 0) ? (ctrl.cloneData.slice(ctrl.cloneData.length - 3 + ctrl.currentIndex, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6))) : ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.currentIndex + 6)) : (((ctrl.currentIndex - 3) >= 0) ? (ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6 - ctrl.cloneData.length))) : (ctrl.cloneData.slice(0, ctrl.cloneData.length)))"><img ng-click="ctrl.goToSlide(($index - 4 + ctrl.currentIndex) % ctrl.cloneData.length)" src="{{slideItem.src}}" /></li>
-        </ul>
-        <md-button class="md-icon-button right-arrow-button">
-            <md-icon ng-click="ctrl.navigateRight()">chevron_right</md-icon>
-        </md-button>
-    </div>
-
-    <!--Right-->
-    <div ng-if="ctrl.miniDisplay==='right'" layout="column" id="small-carousel" class="mini-display-right">
-        <md-button class="md-icon-button left-arrow-button">
-            <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
-        </md-button>
-        <ul id="small-carousel-images">
-            <li id="imgScroll" ng-repeat="slideItem in ((ctrl.cloneData.length - ctrl.currentIndex + 1) >= 5) ? (((ctrl.currentIndex - 3) < 0) ? (ctrl.cloneData.slice(ctrl.cloneData.length - 3 + ctrl.currentIndex, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6))) : ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.currentIndex + 6)) : (((ctrl.currentIndex - 3) >= 0) ? (ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6 - ctrl.cloneData.length))) : (ctrl.cloneData.slice(0, ctrl.cloneData.length)))"><img ng-click="ctrl.goToSlide(($index - 4 + ctrl.currentIndex) % ctrl.cloneData.length)" src="{{slideItem.src}}" /></li>
-        </ul>
-        <md-button class="md-icon-button right-arrow-button">
-            <md-icon ng-click="ctrl.navigateRight()">chevron_right</md-icon>
-        </md-button>
-    </div>
-    <!--Bottom-->
-    <div ng-if="ctrl.miniDisplay==='bottom'" layout="row" id="small-carousel" class="mini-display-bottom">
+    <div ng-if="ctrl.miniDisplay==='right' || ctrl.miniDisplay==='left'" layout="column" id="small-carousel" ng-class="ctrl.miniDisplayClass">
         <md-button class="md-icon-button left-arrow-button">
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
         <ul id="small-carousel-images">
             <li id="imgScroll" style="vertical-align: middle" ng-repeat="slideItem in ctrl.getMiniSliderIndexRange()">
-                <div  ng-click="ctrl.goToSlide(slideItem)" ng-bind-html="ctrl.getUserElementStringByIndex(slideItem)"></div>
+                <div  ng-click="ctrl.goToSlide(slideItem)" style="position: relative" ng-bind-html="ctrl.getUserElementStringByIndex(slideItem)"></div>
             </li>
         </ul>
         <md-button class="md-icon-button right-arrow-button">
             <md-icon ng-click="ctrl.navigateRight()">chevron_right</md-icon>
         </md-button>
     </div>
-    <!--Left-->
-    <div ng-if="ctrl.miniDisplay==='left'" layout="column" id="small-carousel" class="mini-display-left">
+    <!--Bottom-->
+    <div ng-if="ctrl.miniDisplay==='bottom' || ctrl.miniDisplay==='top'" layout="row" id="small-carousel" 
+    ng-class="ctrl.miniDisplayClass">
         <md-button class="md-icon-button left-arrow-button">
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
         <ul id="small-carousel-images">
-            <li id="imgScroll" ng-repeat="slideItem in ((ctrl.cloneData.length - ctrl.currentIndex + 1) >= 5) ? (((ctrl.currentIndex - 3) < 0) ? (ctrl.cloneData.slice(ctrl.cloneData.length - 3 + ctrl.currentIndex, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6))) : ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.currentIndex + 6)) : (((ctrl.currentIndex - 3) >= 0) ? (ctrl.cloneData.slice(ctrl.currentIndex - 3, ctrl.cloneData.length).concat(ctrl.cloneData.slice(0, ctrl.currentIndex + 6 - ctrl.cloneData.length))) : (ctrl.cloneData.slice(0, ctrl.cloneData.length)))"><img ng-click="ctrl.goToSlide(($index - 4 + ctrl.currentIndex) % ctrl.cloneData.length)" src="{{slideItem.src}}" /></li>
+            <li id="imgScroll" style="vertical-align: middle" ng-repeat="slideItem in ctrl.getMiniSliderIndexRange()">
+                <div  ng-click="ctrl.goToSlide(slideItem)" style="position: relative" ng-bind-html="ctrl.getUserElementStringByIndex(slideItem)"></div>
+            </li>
         </ul>
         <md-button class="md-icon-button right-arrow-button">
             <md-icon ng-click="ctrl.navigateRight()">chevron_right</md-icon>

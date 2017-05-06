@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="jk-carousel.min.js"></script>
     <script src="script.js"></script>
-    <script src="lib/jquery.js"></script>
+    <script src="lib/jquery.min.js"></script>
   </head>
 
   <body ng-controller="MyCtrl" >
@@ -31,6 +31,8 @@
         speed="1000000"
         arrow-left-main="images/icon2-left.png"
         arrow-right-main="images/icon2-right.png"
+        content-visible="false"
+        mini-display-content-visible="false"
         max-height="500"
         full-screen >
         
@@ -42,14 +44,8 @@
    
     <div style="display: none">
       <div class="slider-combo-container">
-      <img src="images/1.jpg">
-      <!--<div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>-->
-      </div>
-
-
-      <div class="slider-combo-container">
-      <img src="images/1.jpg">
-      <!--<div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>-->
+      <img src="images/5.jpg">
+      <div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>
       </div>
 
       <div class="slider-combo-container">
