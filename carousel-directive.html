@@ -62,9 +62,8 @@
         <md-button class="md-icon-button left-arrow-button">
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
-        {{ctrl.currentIndex}}
         <ul id="small-carousel-images">
-            <li id="imgScroll" ng-repeat="slideItem in ctrl.getMiniSliderIndexRange()">
+            <li id="imgScroll" style="vertical-align: middle" ng-repeat="slideItem in ctrl.getMiniSliderIndexRange()">
                 <div  ng-click="ctrl.goToSlide(slideItem)" ng-bind-html="ctrl.getUserElementStringByIndex(slideItem)"></div>
             </li>
         </ul>
