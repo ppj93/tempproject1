@@ -1,5 +1,5 @@
-<!DOCTYPE html>x
-<html ng-app="myApp">
+<!DOCTYPE html>
+<html>
 
   <head>
     <script data-require="angular.js@*" data-semver="1.5.0" src="lib/angular.js"></script>
@@ -18,21 +18,20 @@
     <script src="lib/jquery.min.js"></script>
   </head>
 
-  <body>
+  <body ng-app="myApp">
     <md-card id="adfasdf" layout="column"  layout-align="center center" style="padding-bottom: 10px" >
-      <h3>Basic Carousel setup</h3>
       <jk-carousel
         item-template-url="'item-template.html'"
-        full-screen-background="red"
+        full-screen-background="#ffffff url('images/background1.jpg') no-repeat center"
         max-width="800" 
-        mini-display="bottom"
+        mini-display="top"
         speed="1000"
-        go-vertically
+        go-horizontally
         arrow-left-main="images/icon2-left.png"
         arrow-right-main="images/icon2-right.png"
         go-auto
         content-visible="true"
-        mini-display-content-visible="true"
+        mini-display-content-visible="false"
         max-height="500"
         full-screen >
         
@@ -45,17 +44,16 @@
     <div style="display: none">
       <div class="slider-combo-container">
       <img src="images/5.jpg">
-      <div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>
+      <div class="content-on-img"><h1>Content on image - 1</h1></div>
       </div>
 
       <div class="slider-combo-container">
       <img src="images/5.jpg">
-      <div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>
+      <div class="content-on-img"><h1>Content on image</h1></div>
       </div>
 
       <div class="slider-combo-container">
       <img src="images/4.jpg">
-      <div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>
       </div>
 
       <div class="slider-combo-container">

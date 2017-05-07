@@ -124,8 +124,8 @@ div.mini-display-top li{
     position: absolute;
     left: 0px;
     top: 0px;
-    background-color: green;
 	width: 100%;
+	color: cyan;
 	display: hidden;
 }
 
