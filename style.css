@@ -128,3 +128,8 @@ div.mini-display-top li{
 	width: 100%;
 	display: hidden;
 }
+
+.mini-slider-selected{
+	border: 5px solid #dadada;
+    border-radius: 10px;
+}

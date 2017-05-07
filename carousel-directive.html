@@ -25,8 +25,8 @@
             <md-icon ng-click="ctrl.navigateLeft()">chevron_left</md-icon>
         </md-button>
         <ul id="small-carousel-images">
-            <li id="imgScroll" style="vertical-align: middle" ng-repeat="slideItem in ctrl.getMiniSliderIndexRange()">
-                <div  ng-click="ctrl.goToSlide(slideItem)" style="position: relative" ng-bind-html="ctrl.getUserElementStringByIndex(slideItem)"></div>
+            <li id="imgScroll" style="vertical-align: middle;" ng-repeat="slideItem in ctrl.getMiniSliderIndexRange()">
+                <div  ng-click="ctrl.goToSlide(slideItem-1)" style="position: relative" ng-bind-html="ctrl.getUserElementStringByIndex(slideItem)"></div>
             </li>
         </ul>
         <md-button class="md-icon-button right-arrow-button">
@@ -41,7 +41,7 @@
         </md-button>
         <ul id="small-carousel-images">
             <li id="imgScroll" style="vertical-align: middle" ng-repeat="slideItem in ctrl.getMiniSliderIndexRange()">
-                <div  ng-click="ctrl.goToSlide(slideItem-1)" style="position: relative" ng-bind-html="ctrl.getUserElementStringByIndex(slideItem)"></div>
+                <div  ng-click="ctrl.goToSlide(slideItem-1)" style="position: relative" ng-class="{'mini-slider-selected':ctrl.currentIndex+1===slideItem}" ng-bind-html="ctrl.getUserElementStringByIndex(slideItem)"></div>
             </li>
         </ul>
         <md-button class="md-icon-button right-arrow-button">

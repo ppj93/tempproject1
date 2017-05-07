@@ -67,3 +67,8 @@
   display: flex;               /* establish flex container */
   align-items: center;         /* vertically center flex items */
 }
+
+#imgScroll img {
+  height: 53.89px;
+  width: 90px
+}
