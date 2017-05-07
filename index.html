@@ -15,21 +15,19 @@
     <link rel="stylesheet" href="jk-carousel.min.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="jk-carousel.min.js"></script>
-    <script src="script.js"></script>
     <script src="lib/jquery.min.js"></script>
   </head>
 
-  <body ng-controller="MyCtrl" >
+  <body>
     <md-card id="adfasdf" layout="column"  layout-align="center center" style="padding-bottom: 10px" >
       <h3>Basic Carousel setup</h3>
       <jk-carousel
-        data="dataArray"
         item-template-url="'item-template.html'"
         full-screen-background="red"
         max-width="800" 
         mini-display="bottom"
-        speed="1000"
-        go-vertically
+        speed="1000000"
+        go-horizontally
         arrow-left-main="images/icon2-left.png"
         arrow-right-main="images/icon2-right.png"
         content-visible="false"
@@ -44,6 +42,11 @@
     </md-card>
    
     <div style="display: none">
+      <div class="slider-combo-container">
+      <img src="images/5.jpg">
+      <div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>
+      </div>
+
       <div class="slider-combo-container">
       <img src="images/5.jpg">
       <div class="content-on-img"><h1>This div should be visible on top of above image</h1></div>
